@@ -1,3 +1,21 @@
+def build_path(auxtable):
+    """Returns the moves to build the cheapest path
+    (one of them if several exist), starting from the end.
+    """
+    res = []
+    r = len(auxtable) - 1
+    c = len(auxtable[0]) - 1
+    # r > 0 or c > 0 if auxtable was generated with cheapest_path_topdown.
+    while r > 1 or c > 1:
+        # <= since min returns the first element if both are equal.
+        if auxtable[r-1][c] <= auxtable[r][c-1]:
+            r -= 1
+            res.append('up')
+        else:
+            c -= 1
+            res.append('left')
+    return res
+
 def cheapest_path_bottomup(matrix):
     rows = len(matrix)
     columns = len(matrix[0])
