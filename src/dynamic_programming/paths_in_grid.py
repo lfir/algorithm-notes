@@ -1,6 +1,21 @@
 from utils.utils import printNumTable
 
 
+def grid_paths_bottomup(rows, columns):
+    auxtable = [[None for _ in range(columns)] for _ in range(rows)]
+    # Base cases.
+    for i in range(columns):
+        auxtable[0][i] = 1 
+    for i in range(rows):
+        auxtable[i][0] = 1 
+
+    for i in range(1, rows):
+        for j in range(1, columns):
+            auxtable[i][j] = auxtable[i-1][j] + auxtable[i][j-1]
+
+    printNumTable(auxtable)
+    return auxtable[rows-1][columns-1]
+
 def grid_paths_topdown(auxtable, endrowidx, endcolidx):
     if endrowidx == 0 or endcolidx == 0:
       return 1
