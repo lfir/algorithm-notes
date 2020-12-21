@@ -1,5 +1,6 @@
 from utils.utils import printNumTable
 
+
 def grid_paths_topdown(auxtable, endrowidx, endcolidx):
     if endrowidx == 0 or endcolidx == 0:
       return 1
