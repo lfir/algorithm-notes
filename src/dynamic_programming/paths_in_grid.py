@@ -1,4 +1,4 @@
-from src.utils import printNumTable
+from utils.utils import printNumTable
 
 def grid_paths_topdown(auxtable, endrowidx, endcolidx):
     if endrowidx == 0 or endcolidx == 0:
@@ -17,7 +17,7 @@ def grid_paths(rows, columns):
     auxtable[0][0] = 1
 
     res = grid_paths_topdown(auxtable, rows-1, columns-1)
-    #printNumTable(auxtable)
+    printNumTable(auxtable)
 
     return res
 
