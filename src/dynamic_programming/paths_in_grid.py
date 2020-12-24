@@ -1,4 +1,4 @@
-from utils.utils import printNumTable
+from utils.utils import print_numtable
 
 
 def grid_paths_bottomup(rows, columns):
@@ -13,7 +13,7 @@ def grid_paths_bottomup(rows, columns):
         for j in range(1, columns):
             auxtable[i][j] = auxtable[i-1][j] + auxtable[i][j-1]
 
-    printNumTable(auxtable)
+    print_numtable(auxtable)
     return auxtable[rows-1][columns-1]
 
 def grid_paths_topdown(auxtable, endrowidx, endcolidx):
@@ -33,7 +33,7 @@ def grid_paths(rows, columns):
     auxtable[0][0] = 1
 
     res = grid_paths_topdown(auxtable, rows-1, columns-1)
-    printNumTable(auxtable)
+    print_numtable(auxtable)
 
     return res
 

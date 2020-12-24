@@ -2,7 +2,7 @@ from random import randrange
 from time import gmtime, process_time, strftime
 
  
-def printNumTable(table):
+def print_numtable(table):
     """Prints the received table (2D array) with column and row numbers 
     and fixed column width (1 tab, up to 7 characters per cell).
     """
