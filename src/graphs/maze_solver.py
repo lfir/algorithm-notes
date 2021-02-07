@@ -57,6 +57,10 @@ def solvemaze(grid):
     To find a solution a graph is created based on the grid and BFS is used
     to traverse it and find the shortest path between the start and end nodes.
     Preconditions: The grid contains one start and one end cell.
+    Time complexity: O(V + E).
+    Space complexity: O(V).
+    Where V is the number of Vertices (grid's width * height) and
+    E the number of Edges in the graph used for BFS.
     """
     path = []
     startnode, endnode = creategraph(grid)
