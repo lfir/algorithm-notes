@@ -1,3 +1,6 @@
+from utils.utils import print_numtable
+
+
 def grid_paths_recursive(rows, columns):
     """Returns the number of distinct paths from the starting point of a grid
     [0, 0] to the end point [m, n].
