@@ -46,7 +46,7 @@ def creategraph(grid):
 
     return startnode, endnode
 
-def solvemaze(grid):
+def solve(grid):
     """Returns a solution for a maze that uses the minimum number of moves possible.
     The maze is represented as a grid with the following characters
     as possible cell values:
@@ -84,3 +84,39 @@ def solvemaze(grid):
     path.append(endnode.gridposition)
 
     return path
+
+
+"""Examples:
+m0 = [
+    ["S"],
+    ["E"]
+]
+print(solve(m0))
+
+m1 = [["S", "E"]]
+print(solve(m1))
+
+m2 = [["S", "P", "E"]]
+print(solve(m2))
+
+m3 = [
+    ["S"],
+    ["P"],
+    ["E"]
+]
+print(solve(m3))
+
+m4 = [
+    ["S", "P", "W"],
+    ["W", "E", "W"]
+]
+print(solve(m4))
+
+m5 = [
+    ["W", "P", "S"],
+    ["W", "P", "W"],
+    ["P", "P", "P"],
+    ["P", "P", "E"]
+]
+print(solve(m5))
+"""
