@@ -6,7 +6,7 @@ def solve(currentstate, prevstates):
     currentstate -- List with the current position of the farmer and each purchase.
     prevstates -- List of lists with the valid states explored so far.
     return -- Whether a valid end state was reached and the list of valid states explored.
-    
+
     Example:
     Being on one of the sides of the river is represented by True
     and on the other one using False.
@@ -33,6 +33,7 @@ def solve(currentstate, prevstates):
 
     return end, prevstates
 
+
 def is_valid(arr):
     if arr[1] == arr[2]:
         # If the Wolf and the Goat are on the same side it is valid
@@ -45,11 +46,13 @@ def is_valid(arr):
     else:
         return True
 
+
 def is_new(newstate, statelist):
     for state in statelist:
         if state == newstate:
             return False
     return True
+
 
 def next_state(state, index):
     newstate = [boolean for boolean in state]

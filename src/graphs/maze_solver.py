@@ -19,6 +19,7 @@ class Node():
         # Add self as neighbor of the node in the opposite direction.
         neighbor.neighbors[direction ^ 2] = self
 
+
 def creategraph(grid):
     height = len(grid)
     width = len(grid[0])
@@ -45,6 +46,7 @@ def creategraph(grid):
             nodes[idxnode] = node
 
     return startnode, endnode
+
 
 def solve(grid):
     """Returns a solution for a maze that uses the minimum number of moves possible.
@@ -84,39 +86,3 @@ def solve(grid):
     path.append(endnode.gridposition)
 
     return path
-
-
-"""Examples:
-m0 = [
-    ["S"],
-    ["E"]
-]
-print(solve(m0))
-
-m1 = [["S", "E"]]
-print(solve(m1))
-
-m2 = [["S", "P", "E"]]
-print(solve(m2))
-
-m3 = [
-    ["S"],
-    ["P"],
-    ["E"]
-]
-print(solve(m3))
-
-m4 = [
-    ["S", "P", "W"],
-    ["W", "E", "W"]
-]
-print(solve(m4))
-
-m5 = [
-    ["W", "P", "S"],
-    ["W", "P", "W"],
-    ["P", "P", "P"],
-    ["P", "P", "E"]
-]
-print(solve(m5))
-"""

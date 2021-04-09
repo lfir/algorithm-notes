@@ -14,6 +14,7 @@ def cheapest_path(matrix):
 
     return cheapest_path_topdown(auxtable, matrix, rows-1, columns-1)
 
+
 def cheapest_path_bottomup(matrix):
     rows = len(matrix)
     columns = len(matrix[0])
@@ -26,6 +27,7 @@ def cheapest_path_bottomup(matrix):
             auxtable[i][j] = matrix[i-1][j-1] + min(auxtable[i-1][j], auxtable[i][j-1])
 
     return auxtable[rows][columns]
+
 
 def cheapest_path_topdown(auxtable, matrix, endrowidx, endcolidx):
     currcost = None
@@ -44,6 +46,7 @@ def cheapest_path_topdown(auxtable, matrix, endrowidx, endcolidx):
         currcost = auxtable[endrowidx][endcolidx]
 
     return currcost
+
 
 def build_path(auxtable):
     """Returns the moves to build the cheapest path
