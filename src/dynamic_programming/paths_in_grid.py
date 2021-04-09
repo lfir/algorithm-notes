@@ -1,6 +1,3 @@
-from utils.utils import print_numtable
-
-
 def grid_paths_recursive(rows, columns):
     """Returns the number of distinct paths from the starting point of a grid
     [0, 0] to the end point [m, n].
@@ -24,7 +21,6 @@ def grid_paths(rows, columns):
     auxtable[0][0] = 1
 
     res = grid_paths_topdown(auxtable, rows-1, columns-1)
-    print_numtable(auxtable)
 
     return res
 
@@ -40,7 +36,6 @@ def grid_paths_bottomup(rows, columns):
         for j in range(1, columns):
             auxtable[i][j] = auxtable[i-1][j] + auxtable[i][j-1]
 
-    print_numtable(auxtable)
     return auxtable[rows-1][columns-1]
 
 def grid_paths_topdown(auxtable, endrowidx, endcolidx):
