@@ -6,9 +6,10 @@ def randstr(charlist, length):
     """Generates a string with characters chosen at random from the string
     received as first argument. If an empty string is received, lower
     and upper case letters and decimal digits are used by default.
-    :param charlist: str Characters than can appear in the result.
-    :param length: int Length of the resulting string.
-    :return: str Randomly generated string.
+
+    Positional arguments:
+    charlist -- Characters than can appear in the result.
+    length -- Desidred length of the resulting string.
     """
     res = ""
     chars = ""
@@ -28,8 +29,6 @@ def show_process_time(original_function):
     """Decorator that prints the process time elapsed during the execution
     of the function decorated, up to seconds precision.
     https://docs.python.org/dev/library/time.html#time.process_time
-    :param original_function: callable Function to be timed.
-    :return: callable Decorated function.
     """
 
     def timed_function(*args, **kwargs):
@@ -43,9 +42,12 @@ def show_process_time(original_function):
 
 
 def subsequences(sequence):
-    """Returns one a time all the sub-sequences of target sequence,
-    that preserve the order of the elements.
+    """Returns a generator of all the sub-sequences of target sequence,
+    that preserve the order of the elements. Each sub-sequence is represented
+    as a tuple.
+
     Example:
+
     for i, e in enumerate(subsequences([1, 2])):
         print(i, e)
 
@@ -53,8 +55,6 @@ def subsequences(sequence):
     --> 1 (1,)
     --> 2 (1, 2)
     --> 3 (2,)
-    :param sequence: sequence Target sequence.
-    :return: generator All the subsequences.
     """
     elems = len(sequence)
     yield ()
