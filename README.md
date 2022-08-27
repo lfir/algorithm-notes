@@ -1,5 +1,5 @@
 ## Algorithm notes
-Personal notes and Python implementations of some interesting algorithms I've not found clearly
+Personal notes and Python and Java implementations of some interesting algorithms I've not found clearly
 presented elsewhere so far.
 
 #### Notes
