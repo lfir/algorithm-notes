@@ -1,8 +1,6 @@
 from utils_tabdata import UtilsChart, UtilsPDA
 
 from backtracking.sudoku_solver import solve as solvesudoku
-from dynamic_programming.cheapest_path_in_matrix import cheapest_path
-from dynamic_programming.paths_in_grid import grid_paths, grid_paths_recursive
 from graphs.maze_solver import solve as solvemaze
 
 g9 = [
@@ -17,3 +15,10 @@ g9 = [
     [5, 4, 1, 7, None, None, 8, 6, None]
 ]
 UtilsPDA.print_numtable(solvesudoku(g9).pop())
+
+m0 = [
+    ["S"],
+    ["E"]
+]
+print(solvemaze(m0))
+
