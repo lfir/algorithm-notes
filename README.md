@@ -7,6 +7,3 @@ presented elsewhere so far.
 reside in sub-directories, directly instead of via main.py, requires adding the src directory to PYTHONPATH first
 
       export PYTHONPATH="${PYTHONPATH}:$(pwd)/src/python"
-
-- Auxiliary classes UtilsChart, UtilsPDA imported in main.py require package
-[utils_tabdata](https://github.com/Asta1986/utils_tabdata)

@@ -1,5 +1,3 @@
-from utils_tabdata import UtilsChart, UtilsPDA
-
 from backtracking.sudoku_solver import solve as solvesudoku
 from graphs.maze_solver import solve as solvemaze
 
@@ -14,7 +12,7 @@ g9 = [
     [7, None, None, None, None, None, None, 5, 1],
     [5, 4, 1, 7, None, None, 8, 6, None]
 ]
-UtilsPDA.print_numtable(solvesudoku(g9).pop())
+print(solvesudoku(g9).pop())
 
 m0 = [
     ["S"],
